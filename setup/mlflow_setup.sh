@@ -7,7 +7,12 @@ sudo dnf install gcc openssl-devel bzip2-devel libffi-devel
 
 sudo yum update -y
 
-echo python3 -v
+echo "Python Version:"
+python3 -v
+
+echo "Pip version:"
+pip -v
+pip3 -v
 
 # Required packages
 # sudo pip3 install mlflow psycopg2-binary boto3
