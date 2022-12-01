@@ -18,4 +18,4 @@ pip3 -v
 # Required packages
 sudo pip3 install mlflow psycopg2-binary boto3
 
-sudo nohup mlflow server --host 0.0.0.0 &
+mlflow server --host 0.0.0.0 &
