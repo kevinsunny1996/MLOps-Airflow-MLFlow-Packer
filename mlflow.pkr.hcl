@@ -32,7 +32,7 @@ build {
     name = "MLFLow-AMI"
 
     sources = [
-        "source.amazon_ebs.mlflow"
+        "source.amazon-ebs.mlflow"
     ]
 
     provisioner "shell" {
