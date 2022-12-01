@@ -3,10 +3,19 @@
 # Wait till AMI instance is up to do the remaining
 sleep 30
 
-sudo apt update -y
+sudo dnf install gcc openssl-devel bzip2-devel libffi-devel  
 
-# Install all the required tools for mlflow UI
-sudo apt install python 3.8
+sudo yum update -y
+
+yum -y install wget  
+
+echo "Pulling up Python 3.11.0"
+cd /opt  wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz
+
+echo "Python3.11.0 downloaded...Inflating the tarball file"
+tar xzf Python-3.11.0.tgz  
+
+cd Python-3.11.0  sudo ./configure --enable-optimizations  sudo make altinstall  
 
 # Required packages
 sudo pip3 install mlflow psycopg2-binary boto3

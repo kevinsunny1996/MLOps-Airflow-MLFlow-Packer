@@ -18,14 +18,14 @@ source "amazon-ebs" "mlflow" {
 
     source_ami_filter {
         filters = {
-            name = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"
+            name = "RHEL-9.0.0_HVM-*-x86_64-1-Hourly2-GP2"
             root-device-type = "ebs"
             virtualization-type = "hvm"
         }
         most_recent = true
-        owners = ["099720109477"]
+        owners = ["309956199498"]
     }
-    ssh_username = "ubuntu"
+    ssh_username = "ec2-user"
 }
 
 build {
