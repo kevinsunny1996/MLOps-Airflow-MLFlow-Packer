@@ -10,14 +10,16 @@ sudo yum update -y
 yum -y install wget  
 
 echo "Pulling up Python 3.11.0"
-cd /opt  wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz
+cd /opt  
+
+sudo wget https://www.python.org/ftp/python/3.11.0/Python-3.11.0.tgz
 
 echo "Python3.11.0 downloaded...Inflating the tarball file"
-tar xzf Python-3.11.0.tgz  
+sudo tar xzf Python-3.11.0.tgz  
 
 cd Python-3.11.0  sudo ./configure --enable-optimizations  sudo make altinstall  
 
 # Required packages
 sudo pip3 install mlflow psycopg2-binary boto3
 
-nohup mlflow server --host 0.0.0.0 &
+sudo nohup mlflow server --host 0.0.0.0 &
