@@ -12,7 +12,7 @@ locals {
 }
 
 source "amazon-ebs" "mlflow" {
-    ami_name = "mlflow-server-{local.timestamp}"
+    ami_name = "mlflow-server-${local.timestamp}"
     instance_type = "t2.micro"
     region = "us-east-1"
 
