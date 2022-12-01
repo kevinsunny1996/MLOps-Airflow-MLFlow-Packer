@@ -10,7 +10,7 @@ sudo yum update -y
 echo "Python Version:"
 python3 -v
 
-sudo dnf install -y python3-pip
+sudo dnf install -y python3-pip nohup
 
 echo "Pip version:"
 pip3 -v
@@ -18,4 +18,4 @@ pip3 -v
 # Required packages
 sudo pip3 install mlflow psycopg2-binary boto3
 
-mlflow server --host 0.0.0.0 &
+nohup mlflow server --host 0.0.0.0 
