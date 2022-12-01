@@ -48,7 +48,7 @@ jobs:
         with:
           command: validate
           arguments: -syntax-only
-          target: packer.pkr.hcl
+          target: mlflow.pkr.hcl
 
        # build artifact
       - name: Build Artifact
