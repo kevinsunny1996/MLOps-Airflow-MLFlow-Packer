@@ -10,7 +10,7 @@ sudo yum update -y
 echo "Python Version:"
 python3 -v
 
-sudo dnf install python3-pip
+sudo dnf install -y python3-pip
 
 echo "Pip version:"
 pip3 -v
