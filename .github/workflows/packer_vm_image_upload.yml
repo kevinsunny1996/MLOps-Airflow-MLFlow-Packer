@@ -36,10 +36,11 @@ jobs:
           command: init
 
       # fix backwards incompatibilities in template
-      - name: Fix Template
-        uses: hashicorp/packer-github-actions@master
-        with:
-          command: fix
+      # Deprecated - Packer uses HCL as of now and fix works on JSON config which is used in legacy packer versions
+      # - name: Fix Template
+      #   uses: hashicorp/packer-github-actions@master
+      #   with:
+      #     command: fix
 
       # validate templates
       - name: Validate Template
