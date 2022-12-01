@@ -10,9 +10,10 @@ sudo yum update -y
 echo "Python Version:"
 python3 -v
 
+sudo dnf install python3-pip
+
 echo "Pip version:"
 pip -v
-pip3 -v
 
 # Required packages
 # sudo pip3 install mlflow psycopg2-binary boto3
